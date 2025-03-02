@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>老年人能力定期评估</title>
+
+    <style>
+        body {
+            background-color: rgba(220, 220, 220, 0.32);
+            font-family: Arial, sans-serif;
+        }
+        a {
+            display: inline-block;
+            width: 330px;
+            height: 80px;
+            background-color: dodgerblue;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            line-height: 80px;
+            font-size: 20px;
+            margin: 5px;
+            border-radius: 8px;
+        }
+        a:hover {
+            background-color: lightskyblue;
+        }
+        .select {
+            background-color: lightskyblue;
+        }
+        .search-container {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .search-container input[type="text"] {
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .search-container button {
+            padding: 8px;
+            font-size: 16px;
+            background-color: dodgerblue;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .search-container button:hover {
+            background-color: lightskyblue;
+        }
+        .select {
+            background-color: lightskyblue;
+        }
+        .select1{
+            background-color: lightskyblue;
+        }
+        .div2 {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100px;
+            background-color: #e1e0e0;
+            padding: 0 20px;
+        }
+        .div2 p {
+            font-size: 18px;
+            color: #333;
+            margin: 0;
+            padding: 10px 20px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+       l{
+           font-size: 18px;
+           color: #5b5a5a;
+           margin: 0;
+           padding: 10px 20px;
+           background-color: lightskyblue;
+           border-radius: 8px;
+           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+       }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: dodgerblue;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            background-position: center bottom;
+        }
+        input[type="submit"]:hover {
+            background-color: lightskyblue;
+        }
+    </style>
+</head>
+<body>
+<div class="div1">
+    <img src="https://www.jkheb2030.org.cn/Content/peixun/img/logo.png" >
+</div>
+<div class="search-container">
+    <input type="text" placeholder="搜索..." name="search" id="search">
+    <button type="submit">搜索</button>
+</div>
+<a href="informationadd.html">老年人信息导入</a>
+<a class="select" >老年人能力定期评估</a>
+<a href="select1.html">能力评估数据多条件查询</a>
+<a href="ability.html">能力数据统计</a>
+<a href="enter.html">能力数据导出</a>
+<div class="div2">
+    <l>日常生活活动评估</l>
+    <p>精神状态评估</p>
+    <p>感知觉与沟通评估</p>
+    <p>社会参与评估</p>
+</div>
+<form action="/work-demo/assessment1" method="post">
+    <h1>老年人能力评估表</h1>
+    <h2>日常生活活动评估</h2>
+    <hr>
+    <p>请输入身份证号码:<input type="text" name="number" id="number"></p>
+    <hr>
+    <h3>1.进食(指用餐具将食物由容器送到口中、咀嚼、吞咽等过程)</h3>
+    <p>10 分，可独立进食（在合理的时间内独立进食准备好的食物）</p>
+    <p>5 分， 需部分帮助（进食过程中需要一定帮助，如协助把持餐具）</p>
+    <p>0 分， 需极大帮助或完全依赖他人，或有留置营养管</p>
+    打分:
+    <label><input type="radio" name="jinshi" value="10">10分</label>
+    <label><input type="radio" name="jinshi" value="5">5分</label>
+    <label><input type="radio" name="jinshi" value="0">0分</label>
+    <hr>
+    <h3>2.洗澡</h3>
+    <p>5 分， 准备好洗澡水后，可自己独立完成洗澡过程</p>
+    <p>0 分， 需他人帮助 </p>
+    打分:
+    <label><input type="radio" name="xizao" value="5">5分</label>
+    <label><input type="radio" name="xizao" value="0">0分</label>
+    <hr>
+    <h3>3.修饰(指洗脸、刷牙、梳头、刮脸等)</h3>
+    <p>5 分， 可自己独立完成</p>
+    <p>0 分， 需他人帮助</p>
+    打分:
+    <label><input type="radio" name="xiushi" value="5">5分</label>
+    <label><input type="radio" name="xiushi" value="0">0分</label>
+    <hr>
+    <h3>4.穿衣(指穿脱衣服、系扣、拉拉链、穿脱鞋袜、系鞋带)</h3>
+    <p>10 分，可独立完成</p>
+    <p>5 分， 需部分帮助（能自己穿脱，但需他人帮助整理衣物、系扣/鞋带、拉拉链） </p>
+    <p>0 分， 需极大帮助或完全依赖他人</p>
+    打分:
+    <label><input type="radio" name="chuanyi" value="10">10分</label>
+    <label><input type="radio" name="chuanyi" value="5">5分</label>
+    <label><input type="radio" name="chuanyi" value="0">0分</label>
+    <hr>
+    <h3>5.大便控制</h3>
+    <p>10 分，可控制大便</p>
+    <p>5 分， 偶尔失控（每周<1 次），或需要他人提示</p>
+    <p>0 分， 完全失控</p>
+    打分:
+    <label><input type="radio" name="dabian" value="10">10分</label>
+    <label><input type="radio" name="dabian" value="5">5分</label>
+    <label><input type="radio" name="dabian" value="0">0分</label>
+
+    <hr>
+    <h3>6.小便控制</h3>
+    <p>10 分，可控制小便</p>
+    <p>5 分， 偶尔失控（每天<1 次，但每周>1 次），或需要他人提示</p>
+    <p>0 分， 完全失控，或留置导尿管</p>
+    打分:
+    <label><input type="radio" name="xiaobian" value="10">10分</label>
+    <label><input type="radio" name="xiaobian" value="5">5分</label>
+    <label><input type="radio" name="xiaobian" value="0">0分</label>
+    <hr>
+    <h3>7.如厕（包括去厕所、解开衣裤、擦净、整理衣裤、冲水）</h3>
+    <p>10 分，可独立完成</p>
+    <p>5 分， 需部分帮助（需他人搀扶去厕所、需他人帮忙冲水或整理衣裤等）</p>
+    <p>0 分， 需极大帮助或完全依赖他人</p>
+    打分:
+    <label><input type="radio" name="ruce" value="10">10分</label>
+    <label><input type="radio" name="ruce" value="5">5分</label>
+    <label><input type="radio" name="ruce" value="0">0分</label>
+    <hr>
+    <h3>8.床椅转移</h3>
+    <p>15 分，可独立完成</p>
+    <p>10 分，需部分帮助（需他人搀扶或使用拐杖） </p>
+    <p>5 分， 需极大帮助（较大程度上依赖他人搀扶和帮助） </p>
+    <p>0 分， 完全依赖他人</p>
+    打分:
+    <label><input type="radio" name="chuangyi" value="15">15分</label>
+    <label><input type="radio" name="chuangyi" value="10">10分</label>
+    <label><input type="radio" name="chuangyi" value="5">5分</label>
+    <label><input type="radio" name="chuangyi" value="0">0分</label>
+    <hr>
+    <h3>9.平地走路</h3>
+    <p>15 分，可独立在平地上行走 45m</p>
+    <p>10 分，需部分帮助（因肢体残疾、平衡能力差、过度衰弱、视力等问题，在一定程度上需他人地搀扶或使用拐杖、助行器等辅助用具）</p>
+    <p>5 分， 需极大帮助（因肢体残疾、平衡能力差、过度衰弱、视力等问题，在较大程度上依赖他人搀扶，或坐在轮椅上自行移动） </p>
+    <p>0 分， 完全依赖他人</p>
+    打分:
+    <label><input type="radio" name="zoulu" value="15">15分</label>
+    <label><input type="radio" name="zoulu" value="10">10分</label>
+    <label><input type="radio" name="zoulu" value="5">5分</label>
+    <label><input type="radio" name="zoulu" value="0">0分</label>
+    <hr>
+    <h3>10.上下楼梯</h3>
+    <p>10 分，可独立上下楼梯（连续上下 10-15 个台阶）</p>
+    <p>5 分， 需部分帮助（需他人搀扶，或扶着楼梯、使用拐杖等）</p>
+    <p>0 分， 需极大帮助或完全依赖他人</p>
+    打分:
+    <label><input type="radio" name="shanglouti" value="10">10分</label>
+    <label><input type="radio" name="shanglouti" value="5">5分</label>
+    <label><input type="radio" name="shanglouti" value="0">0分</label><br>
+    <br><input type="submit" value="下一项" class="submit">
+</form>
+
+</body>
+</html>

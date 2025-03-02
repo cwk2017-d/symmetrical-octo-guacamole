@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>主界面</title>
+    <style>
+        body {
+            background-color: rgba(220, 220, 220, 0.32);
+            font-family: Arial, sans-serif;
+        }
+        a {
+            display: inline-block;
+            width: 350px;
+            height: 80px;
+            background-color: dodgerblue;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            line-height: 80px;
+            font-size: 20px;
+            margin: 5px;
+            border-radius: 8px;
+        }
+        a:hover {
+            background-color: lightskyblue;
+        }
+        .select {
+            background-color: lightskyblue;
+        }
+        .search-container {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .search-container input[type="text"] {
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .search-container button {
+            padding: 8px;
+            font-size: 16px;
+            background-color: dodgerblue;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .search-container button:hover {
+            background-color: lightskyblue;
+        }
+    </style>
+</head>
+<body>
+<div class="div1">
+
+    <img src="https://www.jkheb2030.org.cn/Content/peixun/img/logo.png" >
+</div>
+<div class="search-container">
+    <input type="text" placeholder="搜索..." name="search" id="search">
+    <button type="submit">搜索</button>
+</div>
+<a href="informationadd.html">老年人信息导入</a>
+<a href="assessment1.html">老年人能力定期评估</a>
+<a href="select1.html">能力评估数据多条件查询</a>
+<a href="#">能力数据统计</a>
+<a href="#">能力数据导出</a>
+</body>
+</html>

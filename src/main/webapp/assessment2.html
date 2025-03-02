@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>精神状态评估</title>
+
+    <style>
+        body {
+            background-color: rgba(220, 220, 220, 0.32);
+            font-family: Arial, sans-serif;
+        }
+        a {
+            display: inline-block;
+            width: 330px;
+            height: 80px;
+            background-color: dodgerblue;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            line-height: 80px;
+            font-size: 20px;
+            margin: 5px;
+            border-radius: 8px;
+        }
+        a:hover {
+            background-color: lightskyblue;
+        }
+        .select {
+            background-color: lightskyblue;
+        }
+        .search-container {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .search-container input[type="text"] {
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .search-container button {
+            padding: 8px;
+            font-size: 16px;
+            background-color: dodgerblue;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .search-container button:hover {
+            background-color: lightskyblue;
+        }
+        .select {
+            background-color: lightskyblue;
+        }
+        .select1{
+            background-color: lightskyblue;
+        }
+        .div2 {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100px;
+            background-color: #e1e0e0;
+            padding: 0 20px;
+        }
+        .div2 p {
+            font-size: 18px;
+            color: #333;
+            margin: 0;
+            padding: 10px 20px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        l{
+            font-size: 18px;
+            color: #5b5a5a;
+            margin: 0;
+            padding: 10px 20px;
+            background-color: lightskyblue;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: dodgerblue;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            background-position: center bottom;
+        }
+        input[type="submit"]:hover {
+            background-color: lightskyblue;
+        }
+    </style>
+</head>
+<body>
+<div class="div1">
+    <img src="https://www.jkheb2030.org.cn/Content/peixun/img/logo.png" >
+</div>
+<div class="search-container">
+    <input type="text" placeholder="搜索..." name="search" id="search">
+    <button type="submit">搜索</button>
+</div>
+<a href="informationadd.html">老年人信息导入</a>
+<a class="select1" >老年人能力定期评估</a>
+<a href="select1.html">能力评估数据多条件查询</a>
+<a href="ability.html">能力数据统计</a>
+<a href="enter.html">能力数据导出</a>
+<div class="div2">
+    <p>日常生活活动评估</p>
+    <l>精神状态评估</l>
+    <p>感知觉与沟通评估</p>
+    <p>社会参与评估</p>
+</div>
+<form action="/work-demo/assessment2" method="post">
+    <h1>老年人能力评估表</h1>
+    <h2>精神状态评估</h2>
+    <hr>
+    <p>请输入身份证号码:<input type="text" name="number" id="number"></p>
+    <hr>
+    <h3>1.认知功能</h3>
+    <h3>测验:</h3>
+    <h3>“我说三样东西，请重复一遍，并记住，一会儿会问您”：苹果、手表、国旗</h3>
+    <h3>(1)画钟测验：“请您在这儿画一个圆形的时钟，在时钟上标出 10 点 45 分” </h3>
+    <h3>(2)回忆词语：“现在请您告诉我，刚才我要您记住的三样东西是什么？”
+        答：_______、________、________（不必按顺序）</h3>
+    <p>0 分，画钟正确（画出一个闭锁圆，指针位置准确），且能回忆出 2-3 个词 </p>
+    <p>1 分，画钟错误（画的圆不闭锁，或指针位置不准确），或只回忆出 0-1 个词</p>
+    <p>2 分，已确诊为认知障碍，如老年痴呆</p>
+    打分:
+    <label><input type="radio" name="renzhi" value="0">0分</label>
+    <label><input type="radio" name="renzhi" value="1">1分</label>
+    <label><input type="radio" name="renzhi" value="2">2分</label>
+    <hr>
+    <h3>2.攻击行为</h3>
+    <p>0 分，无身体攻击行为（如打/踢/推/咬/抓/摔东西）和语言攻击行为（如骂人、语言威胁、尖叫） </p>
+    <p>1 分，每月有几次身体攻击行为，或每周有几次语言攻击行为</p>
+    <p>2 分，每周有几次身体攻击行为，或每日有语言攻击行为</p>
+    打分:
+    <label><input type="radio" name="gongji" value="0">0分</label>
+    <label><input type="radio" name="gongji" value="1">1分</label>
+    <label><input type="radio" name="gongji" value="2">2分</label>
+    <hr>
+    <h3>3.抑郁症状</h3>
+    <p>0 分，无</p>
+    <p>1 分，情绪低落、不爱说话、不爱梳洗、不爱活动</p>
+    <p>2 分，有自杀念头或自杀行为</p>
+    打分:
+    <label><input type="radio" name="yiyv" value="0">0分</label>
+    <label><input type="radio" name="yiyv" value="1">1分</label>
+    <label><input type="radio" name="yiyv" value="2">2分</label>
+    <br><br><input type="submit" value="下一项" class="submit">
+
+</form>
+</body>
+</html>

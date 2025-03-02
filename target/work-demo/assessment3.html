@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>感知觉与沟通评估</title>
+
+    <style>
+        body {
+            background-color: rgba(220, 220, 220, 0.32);
+            font-family: Arial, sans-serif;
+        }
+        a {
+            display: inline-block;
+            width: 350px;
+            height: 80px;
+            background-color: dodgerblue;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            line-height: 80px;
+            font-size: 20px;
+            margin: 5px;
+            border-radius: 8px;
+        }
+        a:hover {
+            background-color: lightskyblue;
+        }
+        .select {
+            background-color: lightskyblue;
+        }
+        .search-container {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .search-container input[type="text"] {
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .search-container button {
+            padding: 8px;
+            font-size: 16px;
+            background-color: dodgerblue;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .search-container button:hover {
+            background-color: lightskyblue;
+        }
+        .select {
+            background-color: lightskyblue;
+        }
+        .select1{
+            background-color: lightskyblue;
+        }
+        .div2 {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100px;
+            background-color: #e1e0e0;
+            padding: 0 20px;
+        }
+        .div2 p {
+            font-size: 18px;
+            color: #333;
+            margin: 0;
+            padding: 10px 20px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        l{
+            font-size: 18px;
+            color: #5b5a5a;
+            margin: 0;
+            padding: 10px 20px;
+            background-color: lightskyblue;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: dodgerblue;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            background-position: center bottom;
+        }
+        input[type="submit"]:hover {
+            background-color: lightskyblue;
+        }
+
+    </style>
+</head>
+<body>
+<div class="div1">
+    <img src="https://www.jkheb2030.org.cn/Content/peixun/img/logo.png" >
+</div>
+<div class="search-container">
+    <input type="text" placeholder="搜索..." name="search" id="search">
+    <button type="submit">搜索</button>
+</div>
+<a href="informationadd.html">老年人信息导入</a>
+<a class="select" >老年人能力定期评估</a>
+<a href="select.html">能力评估数据多条件查询</a>
+<a href="#">能力数据统计</a>
+<a href="#">能力数据导出</a>
+<div class="div2">
+    <p>日常生活活动评估</p>
+    <p>精神状态评估</p>
+    <l>感知觉与沟通评估</l>
+    <p>社会参与评估</p>
+</div>
+<form action="/work-demo/assessment3" method="post">
+    <h1>老年人能力评估表</h1>
+    <h2>精神状态评估</h2>
+    <hr>
+    <p>请输入身份证号码:<input type="text" name="number" id="number"></p>
+    <hr>
+    <h3>1.意识水平</h3>
+    <p>0 分，神志清醒，对周围环境警觉</p>
+    <p>1 分，嗜睡，表现为睡眠状态过度延长。当呼唤或推动其肢体时可唤醒，并能进行正确的交谈或执行指令，停止刺激后又继续入睡</p>
+    <p>2 分，昏睡，一般的外界刺激不能使其觉醒，给予较强烈的刺激时可有短时的意识清醒，醒后可简短回答提问，当刺激减弱后又很快进入睡眠状态</p>
+    <p>3 分，昏迷，处于浅昏迷时对疼痛刺激有回避和痛苦表情；处于深昏迷时对刺激无反应（若评定为昏迷，直接评定为重度失能，可不进行以下项目的评估）</p>
+    打分:
+    <label><input type="radio" name="yishi" value="0">0分</label>
+    <label><input type="radio" name="yishi" value="1">1分</label>
+    <label><input type="radio" name="yishi" value="2">2分</label>
+    <label><input type="radio" name="yishi" value="3">3分</label>
+    <hr>
+    <h3>2.视力（若平日带老花镜或近视镜，应在佩戴眼镜的情况下评估）</h3>
+    <p>0 分，能看清书报上的标准字体</p>
+    <p>1 分，能看清楚大字体，但看不清书报上的标准字体</p>
+    <p>2 分，视力有限，看不清报纸大标题，但能辨认物体</p>
+    <p>3 分，辨认物体有困难，但眼睛能跟随物体移动，只能看到光、颜色和形状 </p>
+    <p>4 分，没有视力，眼睛不能跟随物体移动 </p>
+    打分:
+    <label><input type="radio" name="shili" value="0">0分</label>
+    <label><input type="radio" name="shili" value="1">1分</label>
+    <label><input type="radio" name="shili" value="2">2分</label>
+    <label><input type="radio" name="shili" value="3">3分</label>
+    <label><input type="radio" name="shili" value="4">4分</label>
+    <hr>
+    <h3>3.听力（若平时佩戴助听器，应在佩戴助听器的情况下评估 ）</h3>
+    <p>0 分，可正常交谈，能听到电视、电话、门铃的声音</p>
+    <p>1 分，在轻声说话或说话距离超过 2 米时听不清</p>
+    <p>2 分，正常交流有些困难，需在安静的环静或大声说话才能听到</p>
+    <p>3 分，讲话者大声说话或说话很慢，才能部分听见</p>
+    <p>4 分，完全听不见</p>
+    打分:
+    <label><input type="radio" name="tinli" value="0">0分</label>
+    <label><input type="radio" name="tinli" value="1">1分</label>
+    <label><input type="radio" name="tinli" value="2">2分</label>
+    <label><input type="radio" name="tinli" value="3">3分</label>
+    <label><input type="radio" name="tinli" value="4">4分</label>
+    <hr>
+    <h3>4.沟通交流（包括非语言沟通）</h3>
+    <p>0 分，无困难，能与他人正常沟通和交流</p>
+    <p>1 分，能够表达自己的需要及理解别人的话，但需要增加时间或给予帮助</p>
+    <p>2 分，表达需要或理解有困难，需频繁重复或简化口头表达</p>
+    <p>3 分，不能表达需要或理解他人的话</p>
+    打分:
+    <label><input type="radio" name="goutong" value="0">0分</label>
+    <label><input type="radio" name="goutong" value="1">1分</label>
+    <label><input type="radio" name="goutong" value="2">2分</label>
+    <label><input type="radio" name="goutong" value="3">3分</label>
+    <br><br><input type="submit" value="下一项" class="submit">
+
+</form>
+</body>
+</html>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>老年人信息导入</title>
+    <style>
+        body {
+            background-color: rgba(220, 220, 220, 0.32);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        a {
+            display: inline-block;
+            width: 350px;
+            height: 80px;
+            background-color: dodgerblue;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            line-height: 80px;
+            font-size: 20px;
+            margin: 5px;
+            border-radius: 8px;
+        }
+        a:hover {
+            background-color: lightskyblue;
+        }
+        .select {
+            background-color: lightskyblue;
+        }
+        .search-container {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .search-container input[type="text"] {
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .search-container button {
+            padding: 8px;
+            font-size: 16px;
+            background-color: dodgerblue;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .search-container button:hover {
+            background-color: lightskyblue;
+        }
+        form {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h4 {
+            text-align: center;
+            color: #333;
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 24px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        h4 {
+            font-size: 20px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f8f9fa;
+            color: #333;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        input[type="text"], input[type="radio"], input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        input[type="text"] {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+            max-width: 300px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: dodgerblue;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            margin: 20px auto;
+        }
+        input[type="submit"]:hover {
+            background-color: lightskyblue;
+        }
+        label {
+            display: block;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+<div class="div1">
+    <img src="https://www.jkheb2030.org.cn/Content/peixun/img/logo.png">
+</div>
+<div class="search-container">
+    <input type="text" placeholder="搜索..." name="search" id="search">
+    <button type="submit">搜索</button>
+</div>
+<a  class="select">老年人信息导入</a>
+<a href="assessment1.html">老年人能力定期评估</a>
+<a href="select.html">能力评估数据多条件查询</a>
+<a href="#">能力数据统计</a>
+<a href="#">能力数据导出</a>
+
+<form action="/work-demo/informationadd" method="post">
+    <h1>老年人能力评估基本信息表</h1>
+    <h2>评估基本信息表</h2>
+    <table>
+        <tr>
+            <th>评估编号</th>
+            <td><input type="text" id="id" name="id"></td>
+        </tr>
+        <tr>
+            <th>评估基准日期</th>
+            <td><input type="text" id="date" name="date"></td>
+        </tr>
+        <tr>
+            <th>评估原因</th>
+            <td>
+                <label><input type="radio" name="reason" value="接受服务前初评">接受服务前初评</label><br>
+                <label><input type="radio" name="reason" value="接受服务后的常规评估">接受服务后的常规评估</label><br>
+                <label><input type="radio" name="reason" value="状态发生变化后的即时评估">状态发生变化后的即时评估</label><br>
+                <label><input type="radio" name="reason" value="因评估结果有疑问进行的复评">因评估结果有疑问进行的复评</label>
+            </td>
+        </tr>
+    </table>
+
+    <h2>被评估者的基本信息表</h2>
+    <table>
+        <tr>
+            <th>姓名</th>
+            <td><input type="text" id="name" name="name"></td>
+        </tr>
+        <tr>
+            <th>性别</th>
+            <td>
+                <label><input type="radio" name="gender" value="男">男</label>
+                <label><input type="radio" name="gender" value="女">女</label>
+            </td>
+        </tr>
+        <tr>
+            <th>出生日期</th>
+            <td><input type="text" name="birthday" id="birthday"></td>
+        </tr>
+        <tr>
+            <th>身份证号</th>
+            <td><input type="text" name="number" id="number"></td>
+        </tr>
+        <tr>
+            <th>社保卡号</th>
+            <td><input type="text" name="cordnumber" id="cordnumber"></td>
+        </tr>
+        <tr>
+            <th>民族</th>
+            <td>
+                <label><input type="radio" name="nation" value="汉族">汉族</label>
+                <label><input type="radio" name="nation" value="其他民族">其他民族<input type="text" name="nation"></label>
+            </td>
+        </tr>
+        <tr>
+            <th>文化程度</th>
+            <td>
+                <label><input type="radio" name="culture" value="文盲">文盲</label><br>
+                <label><input type="radio" name="culture" value="小学">小学</label><br>
+                <label><input type="radio" name="culture" value="初中">初中</label><br>
+                <label><input type="radio" name="culture" value="高中/技校/中专">高中/技校/中专</label><br>
+                <label><input type="radio" name="culture" value="大学专科及以上">大学专科及以上</label><br>
+                <label><input type="radio" name="culture" value="不详">不详</label>
+            </td>
+        </tr>
+        <tr>
+            <th>宗教信仰</th>
+            <td>
+                <label><input type="radio" name="religion" value="无">无</label>
+                <label><input type="radio" name="religion" value="有">有<input type="text" name="religion"></label>
+            </td>
+        </tr>
+        <tr>
+            <th>婚姻状况</th>
+            <td>
+                <label><input type="radio" name="marrystate" value="未婚">未婚</label><br>
+                <label><input type="radio" name="marrystate" value="已婚">已婚</label><br>
+                <label><input type="radio" name="marrystate" value="丧偶">丧偶</label><br>
+                <label><input type="radio" name="marrystate" value="离婚">离婚</label><br>
+                <label><input type="radio" name="marrystate" value="未说明的婚姻状况">未说明的婚姻状况</label>
+            </td>
+        </tr>
+        <tr>
+            <th>居住情况</th>
+            <td>
+                <label><input type="radio" name="livestate" value="独居">独居</label><br>
+                <label><input type="radio" name="livestate" value="与配偶/伴侣居住">与配偶/伴侣居住</label><br>
+                <label><input type="radio" name="livestate" value="与子女居住">与子女居住</label><br>
+                <label><input type="radio" name="livestate" value="与父母居住">与父母居住</label><br>
+                <label><input type="radio" name="livestate" value="与兄弟姐妹居住">与兄弟姐妹居住</label><br>
+                <label><input type="radio" name="livestate" value="与其他亲属居住">与其他亲属居住</label><br>
+                <label><input type="radio" name="livestate" value="与非亲属关系的人居住">与非亲属关系的人居住</label><br>
+                <label><input type="radio" name="livestate" value="养老机构">养老机构</label>
+            </td>
+        </tr>
+        <tr>
+            <th>医疗费用支付方式(多选)</th>
+            <td>
+                <label><input type="checkbox" name="medicalpay[]" value="城镇职工基本医疗保险">城镇职工基本医疗保险</label><br>
+                <label><input type="checkbox" name="medicalpay[]" value="城镇居民基本医疗保险">城镇居民基本医疗保险</label><br>
+                <label><input type="checkbox" name="medicalpay[]" value="新型农村合作医疗">新型农村合作医疗</label><br>
+                <label><input type="checkbox" name="medicalpay[]" value="贫困救助">贫困救助</label><br>
+                <label><input type="checkbox" name="medicalpay[]" value="商业医疗保险">商业医疗保险</label><br>
+                <label><input type="checkbox" name="medicalpay[]" value="全公费">全公费</label><br>
+                <label><input type="checkbox" name="medicalpay[]" value="全自费">全自费</label><br>
+                <label><input type="checkbox" name="medicalpay[]" value="其他">其他<input type="text" name="medicalpay"></label>
+            </td>
+        </tr>
+        <tr>
+            <th>经济来源(多选):</th>
+            <td>
+                <label><input type="checkbox" name="financial[]" value="退休金/养老金">退休金/养老金</label><br>
+                <label><input type="checkbox" name="financial[]" value="子女补贴">子女补贴</label><br>
+                <label><input type="checkbox" name="financial[]" value="亲友资助">亲友资助</label><br>
+                <label><input type="checkbox" name="financial[]" value="其他补助">其他补助<input type="text" name="financial"></label>
+            </td>
+        </tr>
+    </table>
+
+    <h4>疾病诊断</h4>
+    <table>
+        <tr>
+            <th>痴呆</th>
+            <td>
+                <label><input type="radio" name="disease_1" value="无">无</label>
+                <label><input type="radio" name="disease_1" value="轻度">轻度</label>
+                <label><input type="radio" name="disease_1" value="中度">中度</label>
+                <label><input type="radio" name="disease_1" value="重度">重度</label>
+            </td>
+        </tr>
+        <tr>
+            <th>精神疾病</th>
+            <td>
+                <label><input type="radio" name="disease_2" value="无">无</label><br>
+                <label><input type="radio" name="disease_2" value="精神分裂症">精神分裂症</label><br>
+                <label><input type="radio" name="disease_2" value="双相情感障碍">双相情感障碍</label><br>
+                <label><input type="radio" name="disease_2" value="偏执性精神障碍">偏执性精神障碍</label><br>
+                <label><input type="radio" name="disease_2" value="分裂情感性障碍">分裂情感性障碍</label><br>
+                <label><input type="radio" name="disease_2" value="癫痫所致精神障碍">癫痫所致精神障碍</label><br>
+                <label><input type="radio" name="disease_2" value="精神发育迟滞伴发精神障碍">精神发育迟滞伴发精神障碍</label>
+            </td>
+        </tr>
+        <tr>
+            <th>慢性疾病</th>
+            <td><input type="text" name="disease_3"></td>
+        </tr>
+    </table>
+
+    <h4>近30天内意外事件</h4>
+    <table>
+        <tr>
+            <th>跌倒</th>
+            <td>
+                <label><input type="radio" name="accident_1" value="无">无</label>
+                <label><input type="radio" name="accident_1" value="发生过1次">发生过1次</label>
+                <label><input type="radio" name="accident_1" value="发生过2次">发生过2次</label>
+                <label><input type="radio" name="accident_1" value="发生过3次及以上">发生过3次及以上</label>
+            </td>
+        </tr>
+        <tr>
+            <th>走失</th>
+            <td>
+                <label><input type="radio" name="accident_2" value="无">无</label>
+                <label><input type="radio" name="accident_2" value="发生过1次">发生过1次</label>
+                <label><input type="radio" name="accident_2" value="发生过2次">发生过2次</label>
+                <label><input type="radio" name="accident_2" value="发生过3次及以上">发生过3次及以上</label>
+            </td>
+        </tr>
+        <tr>
+            <th>噎食</th>
+            <td>
+                <label><input type="radio" name="accident_3" value="无">无</label>
+                <label><input type="radio" name="accident_3" value="发生过1次">发生过1次</label>
+                <label><input type="radio" name="accident_3" value="发生过2次">发生过2次</label>
+                <label><input type="radio" name="accident_3" value="发生过3次及以上">发生过3次及以上</label>
+            </td>
+        </tr>
+        <tr>
+            <th>自杀</th>
+            <td>
+                <label><input type="radio" name="accident_4" value="无">无</label>
+                <label><input type="radio" name="accident_4" value="发生过1次">发生过1次</label>
+                <label><input type="radio" name="accident_4" value="发生过2次">发生过2次</label>
+                <label><input type="radio" name="accident_4" value="发生过3次及以上">发生过3次及以上</label>
+            </td>
+        </tr>
+        <tr>
+            <th>其他</th>
+            <td><input type="text" name="accident_5"></td>
+        </tr>
+    </table>
+
+    <h2>信息提供者及联系人信息表</h2>
+    <table>
+        <tr>
+            <th>信息提供者姓名</th>
+            <td><input type="text" name="providername"></td>
+        </tr>
+        <tr>
+            <th>信息提供者与老人的关系</th>
+            <td>
+                <label><input type="radio" name="relationship" value="配偶">配偶</label><br>
+                <label><input type="radio" name="relationship" value="子女">子女</label><br>
+                <label><input type="radio" name="relationship" value="其他亲属">其他亲属</label><br>
+                <label><input type="radio" name="relationship" value="雇佣照顾者">雇佣照顾者</label><br>
+                <label><input type="radio" name="relationship" value="其他">其他<input type="text" name="relationship"></label>
+            </td>
+        </tr>
+        <tr>
+            <th>联系人姓名</th>
+            <td><input type="text" name="phonename"></td>
+        </tr>
+        <tr>
+            <th>联系人电话</th>
+            <td><input type="text" name="phonenumber"></td>
+        </tr>
+    </table>
+    <br>
+    <input type="submit" class="submit" value="提交">
+</form>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="work.mapper.UserMapper">
+
+    <insert id="addlogin">
+        insert into login(number,password)values (#{number},#{password});
+    </insert>
+    <insert id="informationadd">
+        insert into information(id,date,reason,name,gender,birthday,number,cordnumber,nation,culture,religion,marrystate,livestate,medicalpay,financial,disease_1,disease_2,disease_3,accident_1,accident_2,accident_3,accident_4,accident_5,providername,relationship,phonename,phonenumber)
+        values (#{id},#{date},#{reason},#{name},#{gender},#{birthday},#{number},#{cordnumber},#{nation},#{culture},#{religion},#{marrystate},#{livestate},#{medicalpay},#{financial},#{disease_1},#{disease_2},#{disease_3},#{accident_1},#{accident_2},#{accident_3},#{accident_4},#{accident_5},#{providername},#{relationship},#{phonename},#{phonenumber});
+    </insert>
+    <insert id="assessment1add">
+        insert into dailystate(number,jinshi,xizao,xiushi,chuanyi,dabian,xiaobian,ruce,chuangyi,zoulu,shanglouti)
+        values (#{number},#{jinshi},#{xizao},#{xiushi},#{chuanyi},#{dabian},#{xiaobian},#{ruce},#{chuangyi},#{zoulu},#{shanglouti});
+    </insert>
+    <insert id="assessment2add">
+        insert into mentalstate(number,renzhi,gongji,yiyv)
+        values (#{number},#{renzhi},#{gongji},#{yiyv});
+    </insert>
+    <insert id="assessment3add">
+        insert into feelstate(number,yishi,shili,tinli,goutong)
+        values (#{number},#{yishi},#{shili},#{tinli},#{goutong});
+    </insert>
+    <insert id="assessment4add">
+        insert into publicstate(number,shenghuo,gongzuo,shikong,renwu,shejiao)
+        values (#{number},#{shenghuo},#{gongzuo},#{shikong},#{renwu},#{shejiao});
+    </insert>
+    <insert id="abilityadd">
+        insert into ability(number,daily,mental,feel,publics,ability1,changing,ability2,auditor1,auditor2,provider,date)
+        values (#{number},#{daily},#{mental},#{feel},#{publics},#{ability1},#{changing},#{ability2},#{auditor1},#{auditor2},#{provider},#{date});
+    </insert>
+    <select id="selectlogin" resultType="work.pojo.login">
+        select * from login where number=#{number}and password=#{password};
+    </select>
+    <select id="selectdailystate" resultType="work.pojo.dailystate">
+        select * from dailystate where number=#{number};
+    </select>
+    <select id="selectmentalstate" resultType="work.pojo.mentalstate">
+        select * from mentalstate where number=#{number};
+    </select>
+    <select id="selectfeelstate" resultType="work.pojo.feelstate">
+        select * from feelstate where number=#{number};
+    </select>
+    <select id="selectpublicstate" resultType="work.pojo.publicstate">
+        select * from publicstate where number=#{number};
+    </select>
+    <select id="selectinformationbynumber" resultType="work.pojo.information">
+        select * from information where number=#{number};
+    </select>
+    <select id="selectinformationbyphone" resultType="work.pojo.information">
+        select * from information where phonenumber=#{phonenumber};
+    </select>
+    <select id="selectinformation" resultType="work.pojo.information">
+        select * from information where number=#{number} and phonenumber=#{phonenumber};
+    </select>
+    <select id="checkDuplicate" resultType="int">
+        SELECT COUNT(*) FROM your_table
+        WHERE id = #{id}
+           OR date = #{date}
+           OR name = #{name}
+           OR gender = #{gender}
+           OR number = #{number}
+           OR cordnumber = #{cordnumber}
+    </select>
+    <select id="selectability" resultType="work.pojo.ability">
+        select * from ability where number=#{number};
+    </select>
+</mapper>

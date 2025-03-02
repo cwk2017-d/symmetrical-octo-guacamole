@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>社会参与评估</title>
+
+    <style>
+        body {
+            background-color: rgba(220, 220, 220, 0.32);
+            font-family: Arial, sans-serif;
+        }
+        a {
+            display: inline-block;
+            width: 330px;
+            height: 80px;
+            background-color: dodgerblue;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            line-height: 80px;
+            font-size: 20px;
+            margin: 5px;
+            border-radius: 8px;
+        }
+        a:hover {
+            background-color: lightskyblue;
+        }
+        .select {
+            background-color: lightskyblue;
+        }
+        .search-container {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .search-container input[type="text"] {
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .search-container button {
+            padding: 8px;
+            font-size: 16px;
+            background-color: dodgerblue;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .search-container button:hover {
+            background-color: lightskyblue;
+        }
+        .select {
+            background-color: lightskyblue;
+        }
+        .select1{
+            background-color: lightskyblue;
+        }
+        .div2 {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100px;
+            background-color: #e1e0e0;
+            padding: 0 20px;
+        }
+        .div2 p {
+            font-size: 18px;
+            color: #333;
+            margin: 0;
+            padding: 10px 20px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        l{
+            font-size: 18px;
+            color: #5b5a5a;
+            margin: 0;
+            padding: 10px 20px;
+            background-color: lightskyblue;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: dodgerblue;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            background-position: center bottom;
+        }
+        input[type="submit"]:hover {
+            background-color: lightskyblue;
+        }
+    </style>
+</head>
+<body>
+<div class="div1">
+    <img src="https://www.jkheb2030.org.cn/Content/peixun/img/logo.png" >
+</div>
+<div class="search-container">
+    <input type="text" placeholder="搜索..." name="search" id="search">
+    <button type="submit">搜索</button>
+</div>
+<a href="informationadd.html">老年人信息导入</a>
+<a class="select" >老年人能力定期评估</a>
+<a href="select1.html">能力评估数据多条件查询</a>
+<a href="ability.html">能力数据统计</a>
+<a href="enter.html">能力数据导出</a>
+<div class="div2">
+    <p>日常生活活动评估</p>
+    <p>精神状态评估</p>
+    <p>感知觉与沟通评估</p>
+    <l>社会参与评估</l>
+</div>
+<form action="/work-demo/assessment4" method="post">
+    <h1>老年人能力评估表</h1>
+    <h2>精神状态评估</h2>
+    <hr>
+    <p>请输入身份证号码:<input type="text" name="number" id="number"></p>
+    <hr>
+    <h3>1.生活能力</h3>
+    <p>0 分，除个人生活自理外（如饮食、洗漱、穿戴、二便），能料理家务（如做饭、洗衣）或当家管理事务</p>
+    <p>1 分，除个人生活自理外，能做家务，但欠好，家庭事务安排欠条理</p>
+    <p>2 分，个人生活能自理；只有在他人帮助下才能做些家务，但质量不好 </p>
+    <p>3 分，个人基本生活事务能自理（如饮食、二便），在督促下可洗漱</p>
+    <p>4 分，个人基本生活事务（如饮食、二便）需要部分帮助或完全依赖他人帮助</p>
+    打分:
+    <label><input type="radio" name="shenghuo" value="0">0分</label>
+    <label><input type="radio" name="shenghuo" value="1">1分</label>
+    <label><input type="radio" name="shenghuo" value="2">2分</label>
+    <label><input type="radio" name="shenghuo" value="3">3分</label>
+    <label><input type="radio" name="shenghuo" value="4">4分</label>
+    <hr>
+    <h3>2.工作能力</h3>
+    <p>0 分，原来熟练的脑力工作或体力技巧性工作可照常进行</p>
+    <p>1 分，原来熟练的脑力工作或体力技巧性工作能力有所下降</p>
+    <p>2 分，原来熟练的脑力工作或体力技巧性工作明显不如以往，部分遗忘 </p>
+    <p>3 分，对熟练工作只有一些片段保留，技能全部遗忘</p>
+    <p>4 分，对以往的知识或技能全部磨灭</p>
+    打分:
+    <label><input type="radio" name="gongzuo" value="0">0分</label>
+    <label><input type="radio" name="gongzuo" value="1">1分</label>
+    <label><input type="radio" name="gongzuo" value="2">2分</label>
+    <label><input type="radio" name="gongzuo" value="3">3分</label>
+    <label><input type="radio" name="gongzuo" value="4">4分</label>
+    <hr>
+    <h3>3.时间/空间定向</h3>
+    <p>0 分，时间观念（年、月、日、时）清楚；可单独出远门，能很快掌握新环境的方位</p>
+    <p>1 分，时间观念有些下降，年、月、日清楚，但有时相差几天；可单独来往于近街，知道现住地的名称和方位，但不知回家路线</p>
+    <p>2 分，时间观念较差，年、月、日不清楚，可知上半年或下半年；只能单独在家附近行动，对现住地只知名称，不知道方位 </p>
+    <p>3 分，时间观念很差，年、月、日不清楚，可知上午或下午；只能在左邻右舍间串门，对现住地不知名称和方位</p>
+    <p>4 分，无时间观念；不能单独外出</p>
+    打分:
+    <label><input type="radio" name="shikong" value="0">0分</label>
+    <label><input type="radio" name="shikong" value="1">1分</label>
+    <label><input type="radio" name="shikong" value="2">2分</label>
+    <label><input type="radio" name="shikong" value="3">3分</label>
+    <label><input type="radio" name="shikong" value="4">4分</label>
+    <hr>
+    <h3>4.人物定向</h3>
+    <p>0 分，知道周围人们的关系，知道祖孙、叔伯、姑姨、侄子侄女等称谓的意义；可分辨陌生人的大致年龄和身份，可用适当称呼</p>
+    <p>1 分，只知家中亲密近亲的关系，不会分辨陌生人的大致年龄，不能称呼陌生人</p>
+    <p>2 分，只能称呼家中人，或只能照样称呼，不知其关系，不辨辈分</p>
+    <p>3 分，只认识常同住的亲人，可称呼子女或孙子女，可辨熟人和生人</p>
+    <p>4 分，只认识保护人，不辨熟人和生人</p>
+    打分:
+    <label><input type="radio" name="renwu" value="0">0分</label>
+    <label><input type="radio" name="renwu" value="1">1分</label>
+    <label><input type="radio" name="renwu" value="2">2分</label>
+    <label><input type="radio" name="renwu" value="3">3分</label>
+    <label><input type="radio" name="renwu" value="4">4分</label>
+    <hr>
+    <h3>5.社会交往能力</h3>
+    <p>0 分，参与社会，在社会环境有一定的适应能力，待人接物恰当 </p>
+    <p>1 分，能适应单纯环境，主动接触人，初见面时难让人发现智力问题，不能理解隐喻语</p>
+    <p>2 分，脱离社会，可被动接触，不会主动待人，谈话中很多不适词句，容易上当受骗</p>
+    <p>3 分，勉强可与人交往，谈吐内容不清楚，表情不恰当 </p>
+    <p>4 分，难以与人接触</p>
+    打分:
+    <label><input type="radio" name="shejiao" value="0">0分</label>
+    <label><input type="radio" name="shejiao" value="1">1分</label>
+    <label><input type="radio" name="shejiao" value="2">2分</label>
+    <label><input type="radio" name="shejiao" value="3">3分</label>
+    <label><input type="radio" name="shejiao" value="4">4分</label>
+    <br><br><input type="submit" value="提交" class="submit">
+
+</form>
+
+
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+0:0:0:0:0:0:0:1 - - [17/Feb/2025:22:39:46 +0800] "GET /work-demo HTTP/1.1" 302 - http-bio-8080-exec-1 0
+0:0:0:0:0:0:0:1 - - [17/Feb/2025:22:39:46 +0800] "GET /work-demo/ HTTP/1.1" 200 57 http-bio-8080-exec-3 22
+0:0:0:0:0:0:0:1 - - [17/Feb/2025:22:39:47 +0800] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-4 0
+0:0:0:0:0:0:0:1 - - [17/Feb/2025:22:39:51 +0800] "GET /work-demo/login.html HTTP/1.1" 304 - http-bio-8080-exec-5 3
+0:0:0:0:0:0:0:1 - - [17/Feb/2025:22:39:59 +0800] "POST /work-demo/login HTTP/1.1" 200 198 http-bio-8080-exec-6 1008
+0:0:0:0:0:0:0:1 - - [17/Feb/2025:22:40:02 +0800] "GET /work-demo/screen.html HTTP/1.1" 200 2020 http-bio-8080-exec-7 10
+0:0:0:0:0:0:0:1 - - [17/Feb/2025:22:40:09 +0800] "GET /work-demo/select1.html HTTP/1.1" 200 4320 http-bio-8080-exec-8 4
+0:0:0:0:0:0:0:1 - - [17/Feb/2025:22:40:12 +0800] "GET /work-demo/ability.html HTTP/1.1" 200 7810 http-bio-8080-exec-9 3
+0:0:0:0:0:0:0:1 - - [17/Feb/2025:22:41:37 +0800] "POST /work-demo/abilityadd HTTP/1.1" 200 403 http-bio-8080-exec-1 80
+0:0:0:0:0:0:0:1 - - [17/Feb/2025:22:41:37 +0800] "POST /work-demo/enter HTTP/1.1" 200 6511 http-bio-8080-exec-1 65
+0:0:0:0:0:0:0:1 - - [17/Feb/2025:22:43:01 +0800] "GET /work-demo HTTP/1.1" 302 - http-bio-8080-exec-1 0
+0:0:0:0:0:0:0:1 - - [17/Feb/2025:22:43:01 +0800] "GET /work-demo/ HTTP/1.1" 200 57 http-bio-8080-exec-3 19
+0:0:0:0:0:0:0:1 - - [17/Feb/2025:22:43:02 +0800] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-4 0
+0:0:0:0:0:0:0:1 - - [17/Feb/2025:22:43:12 +0800] "POST /work-demo/login HTTP/1.1" 200 198 http-bio-8080-exec-5 1096
+0:0:0:0:0:0:0:1 - - [17/Feb/2025:22:43:15 +0800] "GET /work-demo/screen.html HTTP/1.1" 304 - http-bio-8080-exec-6 5
+0:0:0:0:0:0:0:1 - - [17/Feb/2025:22:43:18 +0800] "GET /work-demo/ability.html HTTP/1.1" 200 7811 http-bio-8080-exec-7 9
